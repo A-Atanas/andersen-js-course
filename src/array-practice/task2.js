@@ -15,3 +15,8 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+export default function arrayDiff(a, b) {
+  const join = Array.from(new Set([...a, ...b]));
+  return join.filter(element => !~a.indexOf(element) || !~b.indexOf(element));
+}

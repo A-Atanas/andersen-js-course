@@ -33,6 +33,7 @@ import { task14Old, task14New } from './es-features/task14';
 import { task15Old, task15New } from './es-features/task15'; // {a: 1, b: 2}
 
 import any from './array-practice/task1';
+import arrayDiff from './array-practice/task2';
 
 // console.log('=============');
 
@@ -127,3 +128,12 @@ console.log(
 
 console.log('Array Practice 1, any([0, 0, 1, 0]) —>', any([0, 0, 1, 0])); // true
 console.log('Array Practice 1, any([0, 0, 0, 0]) —>', any([0, 0, 0, 0])); // false
+
+console.log(
+  'Array Practice 2, arrayDiff([1, 2, 3], [1, 2, 4]) —>',
+  arrayDiff([1, 2, 3], [1, 2, 4])
+); // [3, 4]
+console.log(
+  'Array Practice 2, arrayDiff([1, 3, 3, 4], [1, 3, "4"]) —>',
+  arrayDiff([1, 3, 3, 4], [1, 3, '4'])
+); // [4, '4']
