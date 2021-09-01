@@ -30,7 +30,11 @@ import { task10Old, task10New } from './es-features/task10';
 // import { task12Old, task12New } from './es-features/task12';
 import { task13Old, task13New } from './es-features/task13';
 import { task14Old, task14New } from './es-features/task14';
-import { task15Old, task15New } from './es-features/task15';
+import { task15Old, task15New } from './es-features/task15'; // {a: 1, b: 2}
+
+import any from './array-practice/task1';
+
+// console.log('=============');
 
 console.log('task1 old', task1Old(10) === 500); // true
 console.log('task1 new', task1New(10) === 500); // true
@@ -115,6 +119,11 @@ console.log(
     ['a', 1],
     ['b', 2],
   ])
-); // {a: 1, b: 2}
+);
+console.log(
+  'Array Practice 1, any([0, 1, 2, 0], x => x >= 2) —>',
+  any([0, 1, 2, 0], x => x >= 2)
+); // true
 
-// console.log('=============');
+console.log('Array Practice 1, any([0, 0, 1, 0]) —>', any([0, 0, 1, 0])); // true
+console.log('Array Practice 1, any([0, 0, 0, 0]) —>', any([0, 0, 0, 0])); // false
