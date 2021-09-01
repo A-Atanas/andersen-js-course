@@ -34,8 +34,9 @@ import { task15Old, task15New } from './es-features/task15'; // {a: 1, b: 2}
 
 import any from './array-practice/task1';
 import arrayDiff from './array-practice/task2';
+import forEachRight from './array-practice/task3';
 
-// console.log('=============');
+console.log('=============');
 
 console.log('task1 old', task1Old(10) === 500); // true
 console.log('task1 new', task1New(10) === 500); // true
@@ -45,17 +46,17 @@ console.log('=============');
 console.log('task2 old', task2Old(1, 2, 'test', false, 'new', 'best') === 12); // true
 console.log('task2 new', task2New(1, 2, 'test', false, 'new', 'best') === 12); // true
 
-// console.log('=============');
+console.log('=============');
 
 console.log('task3 old', task3Old(['hello', 'test', 12])); // [ 1, 2, 'hello', 'test', 12 ]
 console.log('task3 new', task3New(['hello', 'test', 12])); // [ 1, 2, 'hello', 'test', 12 ]
 
-// console.log('=============');
+console.log('=============');
 
 console.log('task4 old', task4Old()); // {x: 10, y: 10, bar: function, baztest: 'new field'}
 console.log('task4 new', task4New()); // {x: 10, y: 10, bar: function, baztest: 'new field'}
 
-// console.log('=============');
+console.log('=============');
 
 console.log('task5 old', task5Old(['test', 42], { name: 'foo', val: 7 })); // ['test', 42, 'foo', 7]
 console.log('task5 new', task5New(['test', 42], { name: 'foo', val: 7 })); // ['test', 42, 'foo', 7]
@@ -65,22 +66,22 @@ console.log('task5 new', task5New(['test', 42], { name: 'foo', val: 7 })); // ['
 // console.log('task6 old', task6Old()); // ['Max', 100, 'Admin', false, '1']
 // console.log('task6 new', task6New()); // ['Max', 100, 'Admin', false, '1']
 
-// console.log('=============');
+console.log('=============');
 
 console.log('task7 old', task7Old()); // {test: 0, foo: 1, bar: 2}
 console.log('task7 new', task7New()); // {test: 0, foo: 1, bar: 2}
 
-// console.log('=============');
+console.log('=============');
 
 console.log('task8 old', task8Old()); // [0, 5, 10, 15]
 console.log('task8 new', task8New()); // [0, 5, 10, 15]
 
-// console.log('=============');
+console.log('=============');
 
 console.log('task9 old', task9Old()); // [true, 1]
 console.log('task9 new', task9New()); // [true, 1]
 
-// console.log('=============');
+console.log('=============');
 
 console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
 console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
@@ -95,17 +96,17 @@ console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 // console.log('task12 old', task12Old({ obj2: { some: true } }, 'obj2', 'some2')); // undefined
 // console.log('task12 new', task12New({ obj2: { some: true } }, 'obj2', 'some2')); // undefined
 
-// console.log('=============');
+console.log('=============');
 
 console.log('task13 old', task13Old([1, 2, 3, [4, 5]])); // [1, 2, 3, 4, 5]
 console.log('task13 new', task13New([1, 2, 3, [4, 5]])); // [1, 2, 3, 4, 5]
 
-// console.log('=============');
+console.log('=============');
 
 console.log('task14 old', task14Old({ a: 10, b: 55, c: 3 })); // [["a", 10], ["b", 55], ["c", 3]]
 console.log('task14 new', task14New({ a: 10, b: 55, c: 3 })); // [["a", 10], ["b", 55], ["c", 3]]
 
-// console.log('=============');
+console.log('=============');
 
 console.log(
   'task15 old',
@@ -121,6 +122,9 @@ console.log(
     ['b', 2],
   ])
 );
+
+console.log('=============');
+
 console.log(
   'Array Practice 1, any([0, 1, 2, 0], x => x >= 2) —>',
   any([0, 1, 2, 0], x => x >= 2)
@@ -128,6 +132,8 @@ console.log(
 
 console.log('Array Practice 1, any([0, 0, 1, 0]) —>', any([0, 0, 1, 0])); // true
 console.log('Array Practice 1, any([0, 0, 0, 0]) —>', any([0, 0, 0, 0])); // false
+
+console.log('=============');
 
 console.log(
   'Array Practice 2, arrayDiff([1, 2, 3], [1, 2, 4]) —>',
@@ -137,3 +143,10 @@ console.log(
   'Array Practice 2, arrayDiff([1, 3, 3, 4], [1, 3, "4"]) —>',
   arrayDiff([1, 3, 3, 4], [1, 3, '4'])
 ); // [4, '4']
+
+console.log('=============');
+
+console.log(
+  'Array Practice 3, forEachRight([1, 2, 3, 4], val => console.log(val)) —>',
+  forEachRight([1, 2, 3, 4], val => console.log(val))
+); // 4 3 2 1
