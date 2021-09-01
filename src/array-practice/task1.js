@@ -14,3 +14,11 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+export default function any(array, predicate) {
+  if (predicate === undefined) return any(array, elem => !!elem);
+
+  if (!~array.findIndex(predicate)) {
+    return false;
+  }
+  return true;
+}
