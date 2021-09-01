@@ -40,6 +40,7 @@ import createGenerator from './array-practice/task5';
 import transformArrayToNumber from './array-practice/task6';
 import take from './array-practice/task7';
 import without from './array-practice/task8';
+import indexOfAll from './array-practice/task9';
 
 console.log('=============');
 
@@ -222,3 +223,12 @@ console.log('=============');
 console.log('Array Practice 8, without([2, 1, 2, 3], 1, 2) —>', without([2, 1, 2, 3], 1, 2)); // [3]
 
 console.log('Array Practice 8, without([2, 1, 10, 20], 1, 2) —>', without([2, 1, 10, 20], 1, 2)); // [10, 20]
+
+console.log('=============');
+
+console.log(
+  'Array Practice 9, indexOfAll([1, 2, 3, 1, 2, 3], 1) —>',
+  indexOfAll([1, 2, 3, 1, 2, 3], 1)
+); // [0, 3]
+
+console.log('Array Practice 9, indexOfAll([1, 2, 3], 4) —>', indexOfAll([1, 2, 3], 4)); // []
