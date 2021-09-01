@@ -36,6 +36,7 @@ import any from './array-practice/task1';
 import arrayDiff from './array-practice/task2';
 import forEachRight from './array-practice/task3';
 import union from './array-practice/task4';
+import createGenerator from './array-practice/task5';
 
 console.log('=============');
 
@@ -163,3 +164,19 @@ console.log(
   'Array Practice 4, union([5, 1, 3, 3, 4], [1, 3, 4]) —>',
   union([5, 1, 3, 3, 4], [1, 3, 4])
 ); // [5, 1, 3, 4]
+
+console.log('=============');
+
+const generator = createGenerator([1, '6', 3, 2]);
+console.log(
+  'Array Practice 5, createGenerator([1, "6", 3, 2]) —>',
+  generator.next(),
+  generator.next(),
+  generator.next(),
+  generator.next(),
+  generator.next(),
+  generator.next(),
+  generator.next(),
+  generator.next(),
+  generator.next()
+); // 1, "6", 3, 2, "Complete!", "Complete!", "Complete!"...
