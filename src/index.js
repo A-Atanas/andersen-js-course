@@ -35,6 +35,7 @@ import { task15Old, task15New } from './es-features/task15'; // {a: 1, b: 2}
 import any from './array-practice/task1';
 import arrayDiff from './array-practice/task2';
 import forEachRight from './array-practice/task3';
+import union from './array-practice/task4';
 
 console.log('=============');
 
@@ -150,3 +151,15 @@ console.log(
   'Array Practice 3, forEachRight([1, 2, 3, 4], val => console.log(val)) —>',
   forEachRight([1, 2, 3, 4], val => console.log(val))
 ); // 4 3 2 1
+
+console.log('=============');
+
+console.log(
+  'Array Practice 4, union([5, 1, 2, 3, 3], [4, 3, 2]) —>',
+  union([5, 1, 2, 3, 3], [4, 3, 2])
+); // [5, 1, 2, 3, 4]
+
+console.log(
+  'Array Practice 4, union([5, 1, 3, 3, 4], [1, 3, 4]) —>',
+  union([5, 1, 3, 3, 4], [1, 3, 4])
+); // [5, 1, 3, 4]
