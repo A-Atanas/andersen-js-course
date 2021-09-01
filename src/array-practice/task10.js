@@ -17,4 +17,9 @@
 //   { name: 'React', isActive: true, members: 500 },
 // ];
 
-// function membersOnActiveMeetups(meetups) {}
+export default function membersOnActiveMeetups(meetups) {
+  return meetups.reduce((sum, meetup) => {
+    if (meetup.isActive) return sum + meetup.members;
+    return sum;
+  }, 0);
+}

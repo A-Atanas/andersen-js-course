@@ -41,6 +41,7 @@ import transformArrayToNumber from './array-practice/task6';
 import take from './array-practice/task7';
 import without from './array-practice/task8';
 import indexOfAll from './array-practice/task9';
+import membersOnActiveMeetups from './array-practice/task10';
 
 console.log('=============');
 
@@ -232,3 +233,16 @@ console.log(
 ); // [0, 3]
 
 console.log('Array Practice 9, indexOfAll([1, 2, 3], 4) —>', indexOfAll([1, 2, 3], 4)); // []
+
+console.log('=============');
+
+const meetups = [
+  { name: 'JavaScript', isActive: true, members: 100 },
+  { name: 'Angular', isActive: true, members: 900 },
+  { name: 'Node', isActive: false, members: 600 },
+  { name: 'React', isActive: true, members: 500 },
+];
+console.log(
+  'Array Practice 10, membersOnActiveMeetups(meetups) —>',
+  membersOnActiveMeetups(meetups)
+); // 1500
